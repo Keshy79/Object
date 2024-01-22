@@ -19,9 +19,11 @@ function submit() {
     
             if (pushedStudents) {
                 success.style.display = 'block'
-                setTimeout(()=>{
-                    success.style.display = 'none'
-                }, 3000);
+                // setTimeout(()=>{
+                //     success.style.display = 'none'
+                // }, 3000);
+                localStorage.setItem('allstudents', JSON.stringify(allStudents))
+                window.location.href = 'dashboard.html'
                 
             } else {
                 alert('Failed to submit')
@@ -33,7 +35,7 @@ function submit() {
             document.getElementById('lastname').value = ''
             document.getElementById('mailphone').value = ''
             document.getElementById('password').value = ''
-            loady()
+           
             } else {
                 alert ('RECHECK')
             }
