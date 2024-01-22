@@ -76,7 +76,7 @@ function loady() {
 
 function del(de) {
     allStudents.splice(de, 1)
-    loady()
+    loady();
 }
 
 function edt(edited) {
